@@ -83,17 +83,6 @@ $queries = [
         FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
     )",
     
-    // Bảng lưu tiến trình làm bài của học sinh
-    "CREATE TABLE IF NOT EXISTS exam_progress (
-        progress_id INT AUTO_INCREMENT PRIMARY KEY,
-        exam_participant_id INT,
-        question_id INT,
-        user_answer TEXT,
-        answered_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        FOREIGN KEY (exam_participant_id) REFERENCES exam_participants(exam_participant_id) ON DELETE CASCADE,
-        FOREIGN KEY (question_id) REFERENCES questions(question_id) ON DELETE CASCADE
-    )",
-
    // Bảng quản lý lớp học của giáo viên
     "CREATE TABLE IF NOT EXISTS classes (
         class_id INT AUTO_INCREMENT PRIMARY KEY,
