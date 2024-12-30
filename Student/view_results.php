@@ -54,6 +54,7 @@ $exam_end_time = $exam_start_time->add(new DateInterval('PT' . $exam_duration . 
 $current_time = new DateTime();
 $show_details = $current_time > $exam_end_time; // Hiển thị chi tiết nếu kỳ thi đã kết thúc
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,41 +65,48 @@ $show_details = $current_time > $exam_end_time; // Hiển thị chi tiết nếu
 </head>
 <body>
     <div class="results-container">
-        <div class="header">
+        <!-- Header -->
+        <header class="page-header">
             <h1>Kết quả kỳ thi</h1>
-            <p>Kỳ thi: <span><?php echo htmlspecialchars($result['exam_name']); ?></span></p>
+        </header>
+
+        <!-- Main Content -->
+        <div class="results-card">
+            <div class="exam-info">
+                <h2><?php echo htmlspecialchars($result['exam_name']); ?></h2>
+                <p><strong>Môn học:</strong> <?php echo htmlspecialchars($result['subject']); ?></p>
+            </div>
+
+            <div class="score-summary">
+                <div class="score-item">
+                    <span>Điểm số:</span>
+                    <strong><?php echo htmlspecialchars($result['score']); ?>%</strong>
+                </div>
+                <div class="score-item">
+                    <span>Số câu đúng:</span>
+                    <strong><?php echo htmlspecialchars($result['correct_answers']); ?></strong>
+                </div>
+                <div class="score-item">
+                    <span>Số câu sai:</span>
+                    <strong><?php echo htmlspecialchars($result['wrong_answers']); ?></strong>
+                </div>
+            </div>
+
+            <!-- Details -->
+            <div class="details-section">
+                <?php if ($show_details): ?>
+                    <a href="view_exam_details.php?exam_id=<?php echo urlencode($result['exam_id']); ?>" class="btn-details">Xem chi tiết</a>
+                <?php else: ?>
+                    <span class="not-available">Chi tiết chưa khả dụng</span>
+                <?php endif; ?>
+            </div>
         </div>
 
-        <div class="results-summary">
-            <div class="result-item">
-                <p class="label">Môn học:</p>
-                <p class="value"><?php echo htmlspecialchars($result['subject']); ?></p>
-            </div>
-            <div class="result-item">
-                <p class="label">Điểm số (%):</p>
-                <p class="value"><?php echo htmlspecialchars($result['score']); ?></p>
-            </div>
-            <div class="result-item">
-                <p class="label">Số câu đúng:</p>
-                <p class="value"><?php echo htmlspecialchars($result['correct_answers']); ?></p>
-            </div>
-            <div class="result-item">
-                <p class="label">Số câu sai:</p>
-                <p class="value"><?php echo htmlspecialchars($result['wrong_answers']); ?></p>
-            </div>
-        </div>
-
-        <div class="details-section">
-            <?php if ($show_details): ?>
-                <a href="view_exam_details.php?exam_id=<?php echo urlencode($result['exam_id']); ?>" class="btn-details">Xem chi tiết</a>
-            <?php else: ?>
-                <span class="not-available">Chi tiết chưa khả dụng</span>
-            <?php endif; ?>
-        </div>
-
-        <div class="footer">
+        <!-- Back Button -->
+        <div class="back-button">
             <a href="view_exams.php" class="btn-back">Trở về danh sách kỳ thi</a>
         </div>
     </div>
 </body>
 </html>
+
