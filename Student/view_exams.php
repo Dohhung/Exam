@@ -67,44 +67,59 @@ if ($stmt) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kết quả kỳ thi</title>
-    <link rel="stylesheet" href="../Admin/css/view_results.css">
+    <title>Danh sách kỳ thi</title>
+    <link rel="stylesheet" href="../Admin/CSS/viewstudent_exam.css">
 </head>
 <body>
-    <div class="results-container">
-        <h1 class="page-title">Kết quả kỳ thi</h1>
-        <div class="table-container">
-            <table class="results-table">
-                <thead>
-                    <tr>
-                        <th>Tên kỳ thi</th>
-                        <th>Môn học</th>
-                        <th>Điểm số (%)</th>
-                        <th>Số câu đúng</th>
-                        <th>Số câu sai</th>
-                        <th>Chi tiết</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><?php echo htmlspecialchars($result['exam_name']); ?></td>
-                        <td><?php echo htmlspecialchars($result['subject']); ?></td>
-                        <td><?php echo htmlspecialchars($result['score']); ?></td>
-                        <td><?php echo htmlspecialchars($result['correct_answers']); ?></td>
-                        <td><?php echo htmlspecialchars($result['wrong_answers']); ?></td>
-                        <td>
-                            <?php if ($show_details): ?>
-                                <a href="view_exam_details.php?exam_id=<?php echo urlencode($result['exam_id']); ?>" class="btn-details">Xem chi tiết</a>
-                            <?php else: ?>
-                                <span class="not-available">Chưa có chi tiết</span>
-                            <?php endif; ?>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+    <div class="container">
+        <div class="header">
+            <h2>Danh sách các kỳ thi</h2>
+            <p>Chọn kỳ thi bạn muốn tham gia</p>
         </div>
-        <div class="back-button">
-            <a href="view_exams.php" class="btn-back">Trở về danh sách kỳ thi</a>
+        <div class="text-first mt-4">
+            <a href="student_dashboard.php" class="btn">Trở về</a>
+        </div>
+        <?php if (!empty($exams)) { ?>
+        <ul class="exam-list">
+            <?php foreach ($exams as $exam) { ?>
+            <li class="exam-item">
+                <div class="exam-info">
+                    <div>
+                        <h3 class="exam-title"><?php echo htmlspecialchars($exam['exam_name']); ?></h3>
+                        <p class="exam-subject">Môn học: <?php echo htmlspecialchars($exam['subject']); ?></p>
+                        <p class="exam-start">Bắt đầu: <?php echo htmlspecialchars($exam['start_time']); ?></p>
+                        <p class="exam-end">Kết thúc: <?php echo htmlspecialchars($exam['end_time']); ?></p>
+                    </div>
+                    <div>
+                        <p class="exam-time">Thời gian: <?php echo htmlspecialchars($exam['duration']); ?> phút</p>
+                        <p class="exam-status">Trạng thái: 
+                            <?php 
+                            echo $exam['exam_status'] === 'not_started' ? 'Chưa bắt đầu' : 
+                                 ($exam['exam_status'] === 'ongoing' ? 'Đang diễn ra' : 'Đã kết thúc');
+                            ?>
+                        </p>
+                    </div>
+                </div>
+                <div class="exam-actions">
+                    <?php if ($exam['exam_status'] === 'ongoing') { ?>
+                        <a href="exam.php?exam_id=<?php echo urlencode($exam['exam_id']); ?>" class="btn">Bắt đầu thi</a>
+                    <?php } elseif ($exam['exam_status'] === 'completed' && $exam['user_status'] === 'completed') { ?>
+                        <a href="view_results.php?exam_id=<?php echo urlencode($exam['exam_id']); ?>" class="btn">Xem kết quả</a>
+                    <?php } else { ?>
+                        <button class="btn disabled" disabled>
+                            <?php echo $exam['exam_status'] === 'not_started' ? 'Chưa bắt đầu' : 'Đã kết thúc'; ?>
+                        </button>
+                    <?php } ?>
+                </div>
+            </li>
+            <?php } ?>
+        </ul>
+        <?php } else { ?>
+        <p class="no-exams">Hiện tại không có kỳ thi nào khả dụng. Vui lòng kiểm tra lại sau!</p>
+        <?php } ?>
+
+        <div class="footer">
+            <p>© 2024 Online Exam System</p>
         </div>
     </div>
 </body>
