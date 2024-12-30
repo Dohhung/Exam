@@ -129,6 +129,7 @@ $queries = [
         question_id INT NOT NULL,
         option_id INT,
         exam_id INT NOT NULL,
+        answer_text TEXT,
         FOREIGN KEY (exam_id) REFERENCES exams(exam_id),
         FOREIGN KEY (question_id) REFERENCES questions(question_id),
         FOREIGN KEY (option_id) REFERENCES question_options(option_id)
