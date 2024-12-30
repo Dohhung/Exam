@@ -1,0 +1,97 @@
+/* Tổng thể */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f8fa;
+    margin: 0;
+    padding: 0;
+    color: #343a40;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    margin: 50px auto;
+    max-width: 700px;
+}
+
+h2 {
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Form sửa giáo viên */
+form {
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+form .form-group label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-right: 15px;
+    width: 35%;
+    text-align: right;
+}
+
+form .form-control {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    font-size: 1rem;
+    padding: 10px;
+    flex: 1;
+}
+
+form button {
+    display: inline-block;
+    width: auto;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+.text-center a {
+    display: inline-block;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: #6c757d;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.text-center a:hover {
+    background-color: #5a6268;
+}

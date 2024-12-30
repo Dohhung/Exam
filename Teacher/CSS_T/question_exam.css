@@ -1,0 +1,186 @@
+/* Thiết lập font và màu nền chung */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #a2f6f3, #d6edea); /* Tạo hiệu ứng gradient */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tiêu đề của trang */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+/* Tiêu đề của bảng câu hỏi */
+h2 {
+    color: #2c3e50;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Tiêu đề phần câu hỏi và đáp án */
+h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Form nhập liệu */
+form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #34a6cc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+}
+
+/* Nút chính */
+button[type="submit"], button[type="button"], button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover, button[type="button"]:hover, button:hover {
+    background-color: #45a049;
+}
+
+/* Tạo khoảng cách và border cho bảng câu hỏi */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+table, th, td {
+    border: 1px solid #460f9e;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #2aa0db;
+}
+
+/* Các nút hành động "Sửa", "Xóa" */
+.btn {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.btn-warning {
+    background-color: #f0ad4e;
+}
+
+.btn-warning:hover {
+    background-color: #ec971f;
+}
+
+.btn-danger {
+    background-color: #d9534f;
+}
+
+.btn-danger:hover {
+    background-color: #c9302c;
+}
+
+/* Phần hiển thị câu hỏi khi chưa có */
+p {
+    text-align: center;
+    color: #e74c3c;
+    font-size: 16px;
+}
+
+/* Kiểu cho các nhóm đáp án */
+.option-group {
+    margin-bottom: 10px;
+}
+
+.option-group input[type="text"] {
+    width: 80%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.option-group input[type="checkbox"] {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+/* Nút quay lại */
+button {
+    background-color: #3498db;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Bóng và làm nổi bật khi hover cho bảng */
+table tbody tr:hover {
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+/* Responsive thiết kế cho màn hình nhỏ */
+@media (max-width: 768px) {
+    form {
+        width: 95%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}

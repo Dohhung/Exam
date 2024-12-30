@@ -1,0 +1,102 @@
+/* Toàn bộ body */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6edbd7, #7e82d8); /* Tạo hiệu ứng gradient */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container chung */
+.container {
+    margin-top: 50px;
+    max-width: 1200px; /* Giới hạn chiều rộng container */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Tiêu đề */
+h1 {
+    font-size: 2.5rem;
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form */
+form {
+    max-width: 1000px; /* Giảm chiều rộng form */
+    margin: 0 auto;  /* Căn giữa form */
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #343a40;
+}
+
+input[type="text"], input[type="date"], input[type="email"], select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, input[type="date"]:focus, input[type="email"]:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Nút */
+button {
+    padding: 10px 20px; /* Điều chỉnh padding */
+    font-size: 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: auto; /* Đảm bảo nút có kích thước vừa phải */
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Nút Quay lại */
+.btn-secondary {
+    padding: 10px 20px; /* Điều chỉnh padding */
+    font-size: 1rem;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Căn giữa và khoảng cách nút */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Khoảng cách giữa các nút */
+    margin-top: 20px;
+}

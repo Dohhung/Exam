@@ -1,0 +1,161 @@
+/* Tổng thể */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e8ecef;
+    margin: 0;
+    padding: 0;
+    color: #343a40;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    margin: 50px auto;
+    max-width: 1000px;
+}
+
+h1 {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    margin: 0;
+    text-align: center;
+}
+
+h2, h3 {
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Form thêm giáo viên */
+form {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    margin: 0 auto 30px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+form .form-group label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-right: 15px;
+    width: 30%;
+    text-align: right;
+}
+
+form .form-control {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    font-size: 1rem;
+    padding: 10px;
+    flex: 1;
+}
+
+form button {
+    display: inline-block;
+    width: auto;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: #40de10;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+form button:hover {
+    background-color: #11d8eb;
+}
+
+/* Bảng danh sách giáo viên */
+.table {
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 1.2rem;
+    max-width: 900px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table thead {
+    background-color: #007bff;
+    color: white;
+}
+
+.table th, .table td {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #4be0ed;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f3f5;
+}
+
+/* Nút hành động */
+.btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: white;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Nút quay lại */
+.text-center button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: #6c757d;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.text-center button:hover {
+    background-color: #1cec20;
+    color: #1cec20;
+}

@@ -1,0 +1,144 @@
+/* Thiết lập font và màu nền chung */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tiêu đề của trang */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 20px;
+}
+
+/* Tiêu đề của bảng câu hỏi */
+h2 {
+    color: #2c3e50;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Tiêu đề phần câu hỏi và đáp án */
+h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* Form nhập liệu */
+form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+}
+
+button[type="submit"], button[type="button"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover, button[type="button"]:hover {
+    background-color: #45a049;
+}
+
+button {
+    margin-top: 10px;
+}
+
+/* Tạo khoảng cách và border cho bảng câu hỏi */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Phần hiển thị câu hỏi khi chưa có */
+p {
+    text-align: center;
+    color: #e74c3c;
+}
+
+/* Nút quay lại */
+button {
+    background-color: #3498db;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Kiểu cho các nhóm đáp án */
+.option-group {
+    margin-bottom: 10px;
+}
+
+.option-group input[type="text"] {
+    width: 80%;
+    display: inline-block;
+}
+
+.option-group input[type="checkbox"] {
+    display: inline-block;
+    margin-left: 10px;
+}

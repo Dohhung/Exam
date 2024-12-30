@@ -1,0 +1,79 @@
+/* Cấu hình chung cho body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(https://www.sipsynergy.co.uk/wp-content/uploads/2016/12/gradient-background-blue4.png);
+    background-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container chính */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề trang */
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Cải thiện bảng */
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tr:hover {
+    background-color: #ecf0f1;
+}
+
+/* Nút quay lại */
+button {
+    display: inline-block; /* Để nút có kích thước tự động theo nội dung */
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Đảm bảo chứa button trong một container để căn giữa */
+.button-container {
+    display: flex;
+    justify-content: center; /* Căn giữa nút */
+    margin-top: 20px;
+}

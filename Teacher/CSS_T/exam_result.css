@@ -1,0 +1,119 @@
+/* Cấu hình chung cho toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6edbd7, #7e82d8); /* Tạo hiệu ứng gradient */
+    color: #eee0e0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container chính */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #141312;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(218, 99, 99, 0);
+}
+
+/* Tiêu đề trang */
+h2 {
+    text-align: center;
+    color: #eff2f3;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Form tìm kiếm */
+.search-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    width: 80%;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: #2980b9;
+}
+
+/* Bảng kết quả */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+/* Tiêu đề bảng */
+th {
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Dữ liệu trong bảng */
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #51a8c8;
+    font-size: 14px;
+}
+
+/* Đổi màu dòng khi hover */
+tr:hover {
+    background-color: #4db5d2;
+}
+
+/* Nút quay lại */
+button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin: 20px auto;
+    display: block;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Đảm bảo căn giữa phần tử */
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Điều chỉnh cho màn hình di động */
+@media (max-width: 768px) {
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}

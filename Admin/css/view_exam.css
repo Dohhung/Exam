@@ -1,0 +1,107 @@
+/* Cấu hình chung cho body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container chính chứa nội dung */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề trang */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+/* Thông tin kỳ thi (chẳng hạn tên kỳ thi, môn học) */
+p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Các câu hỏi và phần đáp án */
+.question {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #f9fafb;
+    border-left: 5px solid #3498db;
+    border-radius: 5px;
+}
+
+.question p {
+    margin-bottom: 10px;
+}
+
+/* Đáp án cho câu hỏi */
+.answers {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.answers ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.answers li {
+    margin-bottom: 8px;
+}
+
+/* Nhấn mạnh đáp án đúng */
+.answers li strong {
+    color: green;
+}
+
+/* Nút quay lại */
+button {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+h1, h2 {
+    text-align: center;
+}
+.question {
+    margin-bottom: 20px;
+}
+.answers {
+    margin-left: 20px;
+}
