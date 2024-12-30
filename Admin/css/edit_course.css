@@ -1,0 +1,116 @@
+/* Cơ bản cho trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container - làm bảng lớn hơn */
+.container {
+    max-width: 900px; /* Thay đổi chiều rộng bảng */
+    margin: 50px auto;
+    padding: 40px; /* Thêm padding để bảng rộng hơn */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề */
+h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Form nhóm */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Nhãn cho trường dữ liệu */
+label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Các trường nhập liệu */
+input[type="text"], select {
+    width: 100%;
+    padding: 12px; /* Tăng padding để trường nhập liệu lớn hơn */
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+/* Thêm hiệu ứng khi nhập liệu */
+input[type="text"]:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Nút "Cập nhật khóa học" */
+button[type="submit"] {
+    width: auto; /* Giảm chiều dài nút */
+    padding: 12px 24px; /* Điều chỉnh padding cho nút */
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px; /* Khoảng cách giữa các nút */
+}
+
+/* Nút "Cập nhật khóa học" khi hover */
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Nút Quay lại (có cùng kiểu dáng nhưng nhỏ hơn) */
+.form-buttons .btn-secondary {
+    padding: 8px 16px; /* Giảm kích thước nút */
+    font-size: 16px;
+    background-color: #6c757d;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+/* Nút Quay lại khi hover */
+.form-buttons .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Căn giữa các nút */
+.form-buttons {
+    display: flex;
+    flex-direction: column; /* Sắp xếp theo cột, nút "Quay lại" sẽ nằm dưới "Cập nhật khóa học" */
+    align-items: center; /* Căn giữa các nút theo chiều ngang */
+    gap: 20px; /* Khoảng cách giữa các nút */
+    margin-top: 30px; /* Khoảng cách giữa form và các nút */
+}
+
+/* Hiển thị thông báo thành công hoặc lỗi */
+.success, .error {
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.success {
+    color: green;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    color: red;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}

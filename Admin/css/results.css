@@ -1,0 +1,108 @@
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Results container */
+.results-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* Header styling */
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* Result summary */
+p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Question feedback section */
+.question-feedback {
+    background-color: #f9f9f9;
+    border-left: 5px solid #4CAF50;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.question-feedback p {
+    margin: 8px 0;
+}
+
+/* Correct answer text styling */
+.question-feedback p strong {
+    color: #333;
+}
+
+/* Result color: Correct/Incorrect */
+.question-feedback p:last-child {
+    font-weight: bold;
+}
+
+.question-feedback p:last-child.correct {
+    color: #4CAF50;
+}
+
+.question-feedback p:last-child.incorrect {
+    color: #F44336;
+}
+
+/* Back button */
+.back-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-back {
+    text-decoration: none;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .results-container {
+        padding: 20px;
+    }
+
+    .btn-back {
+        width: 100%;
+        padding: 15px;
+    }
+}

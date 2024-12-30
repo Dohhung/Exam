@@ -1,0 +1,124 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.results-container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header */
+.page-header {
+    margin-bottom: 20px;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #007bff;
+}
+
+/* Results Card */
+.results-card {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.results-card .exam-info h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.results-card .exam-info p {
+    margin: 5px 0 15px;
+    color: #555;
+}
+
+/* Score Summary */
+.score-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.score-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.score-item span {
+    display: block;
+    font-size: 14px;
+    color: #555;
+}
+
+.score-item strong {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Details Section */
+.details-section {
+    margin-top: 20px;
+}
+
+.details-section .btn-details {
+    background: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.details-section .btn-details:hover {
+    background-color: #218838;
+}
+
+.details-section .not-available {
+    color: #888;
+    font-style: italic;
+}
+
+/* Back Button */
+.back-button {
+    margin-top: 20px;
+}
+
+.back-button .btn-back {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button .btn-back:hover {
+    background-color: #0056b3;
+}
